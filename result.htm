@@ -1,0 +1,26 @@
+ <div ng-controller="omdbController as model" class="container-fluid"> 
+<h4>Results</h4>
+    
+  <div class="row">
+    
+     <ul class="list-group">
+  	 <li ng-repeat="movie in model.movies" class="list-group-item">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    
+
+<img ng-src="{{movie.Poster}}" width="100px" height="100px" />
+ <br>
+ 
+  <h5>{{movie.Title}}</h5>
+  <strong>Year:{{movie.Year}}</strong>
+
+<hr>
+<a href="http://imdb.com/title/{{movie.imdbID}}" target="_blank" class="btn btn-primary">View Details</a>
+
+ 
+      
+	</li> 
+    </ul>  
+  
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="omdbApp">
+<head>
+   <link href="../../../css/bootstrap.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css"/>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> 
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.js"></script>
+   <script src="maincontroller.js"></script>
+   
+
+ <meta charset="UTF-8">
+<title>Movie Details</title>
+</head>
+<body>
+  <div ng-controller="omdbController as model" class="container-fluid">
+    <div ng-view></div>
+   {{recentSearch}}
+  <input type="text" ng-model="searchText">
+  <button ng-click="setCookie(searchText)">Recent Search</button>
+
+  </div> 
+</body>
+</html>
